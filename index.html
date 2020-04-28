@@ -15,6 +15,10 @@
       integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
     <link rel="stylesheet" href="./style.css" />
     <title>Jingjing Bai</title>
   </head>
@@ -22,26 +26,32 @@
     <header>
       <div class="nav-content">
         <div class="nav-content__title">
-          <nav class="nav-content__fname">Jingjing</nav>
+          <nav class="nav-content__fname animated bounceInRight delay-2s">
+            Jingjing
+          </nav>
           <nav class="nav-content__lname">Bai</nav>
         </div>
         <div class="nav-content__menu">
-          <ul class="nav-content__menu--ul">
-            <li>Home</li>
-            <li>Resume</li>
-            <li>Services</li>
-            <li>Blog</li>
-            <li>Contact</li>
+          <ul class="nav-content__menu-items">
+            <li>
+              <a class="menu_link menu_link--active" href="#home">Home</a>
+            </li>
+            <li>
+              <a class="menu_link" href="#resume">Resume</a>
+            </li>
+            <li><a class="menu_link" href="services">Services</a></li>
+            <li><a class="menu_link" href="blog">Blog</a></li>
+            <li><a class="menu_link" href="contact">Contact</a></li>
           </ul>
         </div>
       </div>
     </header>
 
     <div class="main-page">
-      <div class="sub-page">
-        <section class="sub-page__main">
+      <div class="sub-pages">
+        <section class="sub-page sub-page--active" id="Home">
           <div class="sub-page__header">
-            <div class="sub-page__photo--wrapper">
+            <div class="sub-page__photo-wrapper">
               <img
                 class="sub-page__photo"
                 src="./img/photo.png"
@@ -70,37 +80,172 @@
                 dolor volutpat ac. Duis nulla enim, condimentum nec ultricies.
               </p>
             </div>
-            <div class="sub-page__basic-info">
-              <ul class="sub-page__basic-info--ul">
+            <div class="sub-page__info">
+              <ul class="sub-page__info-items">
                 <li>
-                  <span class="sub-page__basic-info--left">Age</span>
-                  <span class="sub-page__basic-info--right">29</span>
+                  <span class="sub-page__info-title">Age</span>
+                  <span class="sub-page__info-content">29</span>
                 </li>
                 <li>
-                  <span class="sub-page__basic-info--left">Residence</span
-                  ><span class="sub-page__basic-info--right">Australia</span>
+                  <span class="sub-page__info-title">Residence</span
+                  ><span class="sub-page__info-content">Australia</span>
                 </li>
                 <li>
-                  <span class="sub-page__basic-info--left">Address</span
-                  ><span class="sub-page__basic-info--right"
+                  <span class="sub-page__info-title">Address</span
+                  ><span class="sub-page__info-content"
                     >Level 3 / 57 Coronation Drive, Brisbane</span
                   >
                 </li>
                 <li>
-                  <span class="sub-page__basic-info--left">e-mail</span
-                  ><span class="sub-page__basic-info--right"
+                  <span class="sub-page__info-title">e-mail</span
+                  ><span class="sub-page__info-content"
                     ><a href="mailto:email@example.com"
                       >info@jiangren.com.au</a
                     ></span
                   >
                 </li>
                 <li>
-                  <span class="sub-page__basic-info--left">Phone</span
-                  ><span class="sub-page__basic-info--right"
-                    >+0123 123 456 789</span
-                  >
+                  <span class="sub-page__info-title">Phone</span
+                  ><span class="sub-page__info-content">+0123 123 456 789</span>
                 </li>
               </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="sub-page sub-page__custom" id="Resume">
+          <div class="sub-page__header">
+            <h2 class="sub-page__custom--center">Resume</h2>
+          </div>
+          <div class="resume-page__body">
+            <div class="resume-page__timelines">
+              <div class="resume-page__left-timelines">
+                <h3 class="resume-page__timeline-title">
+                  Education
+                </h3>
+                <div class="resume-page__timeline">
+                  <div class="resume-page__timeline-items">
+                    <h4 class="resume-page__item-title">
+                      Specialization Course
+                    </h4>
+                    <span class="resume-page__item-period">2010</span>
+                    <span class="resume-page__item-small">Apple Inc.</span>
+                    <p class="resume-page__item-description">
+                      Mauris magna sapien, pharetra consectetur fringilla vitae,
+                      interdum sed tortor.
+                    </p>
+                  </div>
+                  <div class="resume-page__timeline-items">
+                    <h4 class="resume-page__item-title">
+                      Specialization Course
+                    </h4>
+                    <span class="resume-page__item-period">2010</span>
+                    <span class="resume-page__item-small">Apple Inc.</span>
+                    <p class="resume-page__item-description">
+                      Mauris magna sapien, pharetra consectetur fringilla vitae,
+                      interdum sed tortor.
+                    </p>
+                  </div>
+                  <div class="resume-page__timeline-items">
+                    <h4 class="resume-page__item-title">
+                      Specialization Course
+                    </h4>
+                    <span class="resume-page__item-period">2010</span>
+                    <span class="resume-page__item-small">Apple Inc.</span>
+                    <p class="resume-page__item-description">
+                      Mauris magna sapien, pharetra consectetur fringilla vitae,
+                      interdum sed tortor.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="resume-page__right-timelines">
+                <h3 class="resume-page__timeline-title">
+                  Experience
+                </h3>
+                <div class="resume-page__timeline">
+                  <div class="resume-page__timeline-items">
+                    <h4 class="resume-page__item-title">
+                      Frontend-developer
+                    </h4>
+                    <span class="resume-page__item-period"
+                      >Dec 2012 - Current</span
+                    >
+                    <span class="resume-page__item-small">Web Agency</span>
+                    <p class="resume-page__item-description">
+                      Mauris magna sapien, pharetra consectetur fringilla vitae,
+                      interdum sed tortor.
+                    </p>
+                  </div>
+                  <div class="resume-page__timeline-items">
+                    <h4 class="resume-page__item-title">
+                      Web Designer
+                    </h4>
+                    <span class="resume-page__item-period"
+                      >Dec 2011 - Nov 2012</span
+                    >
+                    <span class="resume-page__item-small">Apple Inc.</span>
+                    <p class="resume-page__item-description">
+                      Mauris magna sapien, pharetra consectetur fringilla vitae,
+                      interdum sed tortor.
+                    </p>
+                  </div>
+                  <div class="resume-page__timeline-items">
+                    <h4 class="resume-page__item-title">
+                      Graphic Designer
+                    </h4>
+                    <span class="resume-page__item-period"
+                      >Jan 2010 - Dec 2011</span
+                    >
+                    <span class="resume-page__item-small">Apple Inc.</span>
+                    <p class="resume-page__item-description">
+                      Mauris magna sapien, pharetra consectetur fringilla vitae,
+                      interdum sed tortor.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="resume-page__skills">
+              <div class="resume-page__left-skills">
+                <h3
+                  class="resume-page__skill-title animated bounceInRight delay-10s"
+                >
+                  Design <span>Skills</span>
+                </h3>
+                <h4 class="resume-page__level-title animated zoomIn delay-10s">
+                  Web Design
+                </h4>
+                <div
+                  class="resume-page__skill-level resume-page__skill-level--web animated zoomIn delay-10s"
+                ></div>
+                <h4 class="resume-page__level-title">Graphic Design</h4>
+                <div
+                  class="resume-page__skill-level resume-page__skill-level--graphic"
+                ></div>
+                <h4 class="resume-page__level-title">Print Design</h4>
+                <div
+                  class="resume-page__skill-level resume-page__skill-level--print"
+                ></div>
+              </div>
+              <div class="resume-page__right-skills">
+                <h3 class="resume-page__skill-title">
+                  Coding <span>Skills</span>
+                </h3>
+                <h4 class="resume-page__level-title">HTML5</h4>
+                <div
+                  class="resume-page__skill-level resume-page__skill-level--html5"
+                ></div>
+                <h4 class="resume-page__level-title">CSS3/LESS/SASS</h4>
+                <div
+                  class="resume-page__skill-level resume-page__skill-level--css"
+                ></div>
+                <h4 class="resume-page__level-title">jQuery</h4>
+                <div
+                  class="resume-page__skill-level resume-page__skill-level--jquery"
+                ></div>
+              </div>
             </div>
           </div>
         </section>
@@ -122,5 +267,6 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

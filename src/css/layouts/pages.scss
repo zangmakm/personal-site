@@ -12,6 +12,7 @@
   background-position: center center;
   background-repeat: no-repeat;
 }
+
 header {
   position: fixed;
   width: 100%;
@@ -22,28 +23,35 @@ header {
 .main-page {
   width: 100%;
   height: auto;
-  position: relative;
+  //position: relative;
   margin: 0 auto;
 }
 
-.sub-page {
+.sub-pages {
   position: relative;
   width: 100%;
   height: 700px;
   padding: 0;
   margin: 0 auto;
-  &__main {
-    position: absolute;
-    width: auto;
-    height: auto;
-    top: 100px;
-    left: 0;
-    right: 0;
-    margin: 0 10px;
-    overflow: hidden;
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.1);
+}
+
+.sub-page {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 100px;
+  left: 0;
+  right: 0;
+  margin: 0 10px;
+  overflow: hidden;
+  opacity: 0;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.1);
+
+  &--active {
+    position: relative;
+    opacity: 1;
   }
 
   &__header {
@@ -58,6 +66,12 @@ header {
     background-position: center center;
     background-repeat: no-repeat;
   }
+  &__photo-wrapper {
+    width: 280px;
+    overflow: hidden;
+    margin-bottom: -75px;
+    border: 3px solid #fff;
+  }
 
   &__photo {
     position: relative;
@@ -65,18 +79,13 @@ header {
     max-width: 100%;
     height: auto;
     border: 0;
-    &--wrapper {
-      width: 280px;
-      overflow: hidden;
-      margin-bottom: -75px;
-      border: 3px solid #fff;
-    }
   }
 
   &__content {
     width: 66%;
     text-align: center;
   }
+
   &__name {
     color: #fff;
     font-size: 50px;
@@ -101,7 +110,7 @@ header {
       color: #9e9e9e;
       text-align: center;
       & i {
-        line-height: 40px;
+        line-height: inherit;
         font-size: 16px;
       }
     }
@@ -124,22 +133,181 @@ header {
     }
   }
 
-  &__basic-info {
+  &__info {
     padding: 0 15px;
-    &--ul {
-      margin: 0;
-      padding: 0;
-    }
+  }
+
+  &__info-items {
+    margin: 0;
+    padding: 0;
     & li {
       margin: 6px 0;
       text-align: left;
     }
-    &--left {
-      display: inline-block;
-      min-width: 120px;
+  }
+
+  &__info-title {
+    display: inline-block;
+    min-width: 120px;
+  }
+
+  &__info-content {
+    color: #9e9e9e;
+  }
+
+  //resume page
+  &__custom {
+    & .sub-page__header {
+      border: 0;
+      text-align: center;
+      padding: 30px 50px;
+      margin: 0;
     }
-    &--right {
-      color: #9e9e9e;
+    &--center {
+      color: #fff;
+      margin: auto;
+    }
+  }
+}
+
+.resume-page {
+  &__body {
+    padding: 20px 50px;
+  }
+
+  &__timelines {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left-timelines {
+    width: 50%;
+    padding: 0 10px 0 10px;
+  }
+
+  &__right-timelines {
+    width: 50%;
+    padding: 0 10px 0 10px;
+  }
+
+  &__timeline {
+    border-left: 2px solid #e0e0e0;
+    padding: 10px 0;
+    margin-bottom: 15px;
+  }
+  &__timeline-title {
+    margin: 5px 0 25px;
+    font-size: 20px;
+  }
+
+  &__timeline-items {
+    position: relative;
+    padding: 15px 20px 10px;
+    margin: 0 0 20px 20px;
+    border-left: 2px solid #2eca7f;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #fff;
+      width: 10px;
+      height: 10px;
+      border-radius: 10px;
+      border: 2px solid #2eca7f;
+      left: -28px;
+      top: 20px;
+      z-index: 2;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      border-bottom: 2px solid #2eca7f;
+      left: -22px;
+      top: 24px;
+      z-index: 1;
+    }
+  }
+
+  &__item-title {
+    margin: 0;
+    font-size: 16px;
+  }
+  &__item-period {
+    font-size: 12px;
+    color: #2eca7f;
+    margin-bottom: 8px;
+  }
+  &__item-small {
+    font-size: 12px;
+    line-height: 1.2em;
+    color: #9e9e9e;
+    margin-left: 5px;
+    margin-bottom: 8px;
+    padding-left: 8px;
+    border-left: 1px solid #e0e0e0;
+  }
+
+  &__skills {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left-skills {
+    width: 50%;
+    padding: 0 15px;
+  }
+
+  &__right-skills {
+    width: 50%;
+    padding: 0 15px;
+  }
+
+  &__skill-title {
+    margin: 5px 0 25px;
+    font-size: 20px;
+    & > span {
+      color: #2eca7f;
+    }
+  }
+
+  &__level-title {
+    font-size: 10px;
+    margin: 0 0 5px;
+  }
+
+  &__skill-level {
+    position: relative;
+    width: 100%;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    height: 12px;
+    margin-bottom: 12px;
+    &::after {
+      position: absolute;
+      content: "";
+      border: 1px solid #2eca7f;
+      background-color: #2eca7f;
+      height: 11px;
+    }
+    &--web::after {
+      width: 60%;
+      animation: 3s linear 1s infinite;
+    }
+    &--graphic::after {
+      width: 50%;
+    }
+    &--print::after {
+      width: 70%;
+    }
+    &--jquery::after {
+      width: 55%;
+    }
+    &--html5::after {
+      width: 75%;
+    }
+    &--css::after {
+      width: 60%;
     }
   }
 }

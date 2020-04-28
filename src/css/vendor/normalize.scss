@@ -1,18 +1,13 @@
 a {
-  color: #2eca7f;
+  color: #49515d;
   text-decoration: none;
   outline: none;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 a:hover {
-  color: #ff9800;
-  text-decoration: none;
+  color: #49515d;
   outline: none;
+  text-decoration: none;
 }
 
 a:focus {
@@ -40,4 +35,5 @@ p {
 
 li {
   list-style-type: none;
+  margin: 5px 20px;
 }

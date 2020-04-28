@@ -5,8 +5,7 @@
     display: flex;
     justify-content: flex-start;
     flex-grow: 2;
-    margin-top: 40px;
-    margin-left: 50px;
+    margin: 40px 0 0 50px;
     font-size: 20px;
     font-weight: 500;
     font-family: "Montserrat", Helvetica, sans-serif;
@@ -20,13 +19,37 @@
   }
   &__menu {
     flex-grow: 1;
-    &--ul {
-      display: flex;
-      justify-content: flex-end;
-      margin-top: 20px;
-      & li {
-        margin: 20px;
+    margin: 40px 0 0 50px;
+  }
+
+  &__menu-items {
+    display: flex;
+    justify-content: flex-end;
+    & .menu_link {
+      margin: auto;
+      font-size: 14px;
+      opacity: 0.6;
+      &::after {
+        width: 0;
+        content: "";
+        display: block;
+        border-bottom: 1px solid #2eca7f;
+        margin: auto;
+        margin-top: 4px;
+        transition: all 0.3s ease-in-out;
       }
+      &:hover {
+        opacity: 1;
+      }
+      &:hover::after {
+        width: 20px;
+      }
+    }
+  }
+  & .menu_link--active {
+    opacity: 1;
+    &::after {
+      width: 20px;
     }
   }
 }
